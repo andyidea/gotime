@@ -7,7 +7,11 @@
     
 #Function
 
-    func GetTimeUnix(t time.Time) int64 //获取时间戳
+####获取时间戳
+
+    func GetTimeUnix(t time.Time) int64 
+
+
     func GetNowTimeUnix() int64 //获取当前时间的时间戳
     func Get24time(t time.Time) time.Time //获取当日晚上24点（次日0点）的时间
     func Get24timeUnix(t time.Time) int64 //获取当日晚上24点（次日0点）的时间戳
