@@ -4,3 +4,7 @@
 #Install
 
     go get github.com/muzixiaoxin/gotime
+    
+#Function
+
+    func GetTimeUnix(t time.Time) int64 //获取时间戳
