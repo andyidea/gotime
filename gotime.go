@@ -1,6 +1,6 @@
 // time.go
 
-package util
+package gotime
 
 import (
 	"time"
