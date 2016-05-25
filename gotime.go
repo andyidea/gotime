@@ -34,33 +34,33 @@ func GetToday24timeUnix() int64 {
 	return Get24timeUnix(time.Now())
 }
 
-// 时间转换成日期字符串 time.Time to "2006-01-02"
+// 时间转换成日期字符串 (time.Time to "2006-01-02")
 func TimeToDate(t time.Time) string {
 	return t.Format("2006-01-02")
 }
 
 // 获取当前的日期字符串
-func GetNowDateString() string {
+func GetNowDateStr() string {
 	return TimeToDate(time.Now())
 }
 
-// 时间转换成日期+时间字符串 time.Time to "2006-01-02 15:04:05"
+// 时间转换成日期+时间字符串 (time.Time to "2006-01-02 15:04:05")
 func TimeToDateTime(t time.Time) string {
 	return t.Format("2006-01-02 15:04:05")
 }
 
 // 获取当前的时期+时间字符串
-func GetNowString() string {
-	return timeToDateTime(time.Now())
+func GetNowStr() string {
+	return TimeToDateTime(time.Now())
 }
 
-// 日期字符串转换成时间 "2006-01-02" to time.Time
+// 日期字符串转换成时间 ("2006-01-02" to time.Time)
 func DateStrToTime(d string) time.Time {
 	t, _ := time.ParseInLocation("2006-01-02", d, time.Local)
 	return t
 }
 
-// 日期+时间字符串转换成时间 "2006-01-02 15:04:05" to time.Time
+// 日期+时间字符串转换成时间 ("2006-01-02 15:04:05" to time.Time)
 func DateTimeStrToTime(dt string) time.Time {
 	t, _ := time.ParseInLocation("2006-01-02 15:04:05", dt, time.Local)
 	return t
