@@ -33,7 +33,7 @@
     
 获取当前的日期字符串
 
-    func GetNowDateString() string
+    func GetNowDateStr() string
     
 时间转换成日期+时间字符串 time.Time to "2006-01-02 15:04:05"
 
@@ -41,7 +41,7 @@
     
 获取当前的时期+时间字符串
 
-    func GetNowString() string
+    func GetNowStr() string
     
 日期字符串转换成时间 "2006-01-02" to time.Time
 
