@@ -45,7 +45,7 @@ func GetNowDateString() string {
 }
 
 // 时间转换成日期+时间字符串 time.Time to "2006-01-02 15:04:05"
-func timeToDateTime(t time.Time) string {
+func TimeToDateTime(t time.Time) string {
 	return t.Format("2006-01-02 15:04:05")
 }
 
