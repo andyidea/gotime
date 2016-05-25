@@ -27,7 +27,7 @@
 
     func GetToday24timeUnix() int64
     
-时间转换成日期字符串 time.Time to "2006-01-02"
+时间转换成日期字符串 (time.Time to "2006-01-02")
 
     func TimeToDate(t time.Time) string
     
@@ -35,7 +35,7 @@
 
     func GetNowDateStr() string
     
-时间转换成日期+时间字符串 time.Time to "2006-01-02 15:04:05"
+时间转换成日期+时间字符串 (time.Time to "2006-01-02 15:04:05")
 
     func TimeToDateTime(t time.Time) string
     
@@ -43,10 +43,10 @@
 
     func GetNowStr() string
     
-日期字符串转换成时间 "2006-01-02" to time.Time
+日期字符串转换成时间 ("2006-01-02" to time.Time)
 
     func DateStrToTime(d string) time.Time
     
-日期+时间字符串转换成时间 "2006-01-02 15:04:05" to time.Time
+日期+时间字符串转换成时间 ("2006-01-02 15:04:05" to time.Time)
 
     func DateTimeStrToTime(dt string) time.Time
