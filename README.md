@@ -3,7 +3,7 @@
 
 #Install
 
-    go get github.com/muzixiaoxin/gotime
+    go get github.com/andyidea/gotime
     
 #Function
 
