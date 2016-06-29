@@ -1,5 +1,3 @@
-// time.go
-
 package gotime
 
 import (
@@ -18,15 +16,19 @@ func GetNowTimeUnix() int64 {
 
 // 获取当日晚上24点（次日0点）的时间
 func Get24time(t time.Time) time.Time {
-	date := TimeToDate(t.Add(time.Hour * 24))
-	return DateStrToTime(date)
+	dateStr := TimeToDate(t.Add(time.Hour * 24))
+	return DateStrToTime(dateStr)
 }
 
 // 获取当日晚上24点（次日0点）的时间戳
 func Get24timeUnix(t time.Time) int64 {
-	date := TimeToDate(t.Add(time.Hour * 24))
-	t24 := DateStrToTime(date)
+	t24 := Get24time(t)
 	return GetTimeUnix(t24)
+}
+
+// 获取今天晚上24点（次日0点）的时间
+func GetToday24time() time.Time {
+	return Get24time(time.Now())
 }
 
 // 获取今天晚上24点（次日0点）的时间戳
@@ -39,7 +41,7 @@ func TimeToDate(t time.Time) string {
 	return t.Format("2006-01-02")
 }
 
-// 获取当前的日期字符串
+// 获取当前时间的日期字符串（"2006-01-02"）
 func GetNowDateStr() string {
 	return TimeToDate(time.Now())
 }
@@ -64,4 +66,20 @@ func DateStrToTime(d string) time.Time {
 func DateTimeStrToTime(dt string) time.Time {
 	t, _ := time.ParseInLocation("2006-01-02 15:04:05", dt, time.Local)
 	return t
+}
+
+// 时间字符串转换成时间 ("15:04:05" to time.Time)
+func TimeTodayStrToTime(dt string) time.Time {
+	now := time.Now()
+	strNowDate := TimeToDate(now)
+	return DateTimeStrToTime(strNowDate + " " + dt)
+}
+
+// 是否是周末
+func IsWeekend(t time.Time) bool {
+	wd := t.Weekday()
+	if wd == time.Sunday || wd == time.Saturday {
+		return true
+	}
+	return false
 }
