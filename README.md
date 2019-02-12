@@ -1,6 +1,8 @@
 # gotime
 time的工具集合
 
+[![Build Status](https://www.travis-ci.org/andyidea/gotime.svg?branch=master)](https://www.travis-ci.org/andyidea/gotime)
+
 # Install
 
     go get github.com/andyidea/gotime
