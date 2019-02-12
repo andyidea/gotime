@@ -1,11 +1,11 @@
 # gotime
-用golang写的一个time的工具集合(A time util for golang)
+time的工具集合
 
-#Install
+# Install
 
     go get github.com/andyidea/gotime
     
-#Function
+# Function
 
 获取时间戳
 
@@ -50,3 +50,8 @@
 日期+时间字符串转换成时间 ("2006-01-02 15:04:05" to time.Time)
 
     func DateTimeStrToTime(dt string) time.Time
+    
+    
+是否是周末
+
+    func IsWeekend(t time.Time) bool
