@@ -22,25 +22,25 @@ func TestGetNowTimeUnix(t *testing.T) {
 
 func TestGet24time(t *testing.T) {
 	now := time.Now()
-	time24 := Get24time(now)
+	time24 := Get24Time(now)
 	assert.NotZero(t, time24.Unix())
 }
 
 func TestGet24timeUnix(t *testing.T) {
 	now := time.Now()
-	time24 := Get24time(now)
-	unix := Get24timeUnix(now)
+	time24 := Get24Time(now)
+	unix := Get24TimeUnix(now)
 	assert.NotZero(t, unix)
 	assert.Equal(t, unix, time24.Unix())
 }
 
 func TestGetToday24time(t *testing.T) {
-	time24 := GetToday24time()
+	time24 := GetToday24Time()
 	assert.NotZero(t, time24.Unix())
 }
 
 func TestGetToday24timeUnix(t *testing.T) {
-	unix := GetToday24timeUnix()
+	unix := GetToday24TimeUnix()
 	assert.NotZero(t, unix)
 }
 

@@ -15,25 +15,25 @@ func GetNowTimeUnix() int64 {
 }
 
 // 获取当日晚上24点（次日0点）的时间
-func Get24time(t time.Time) time.Time {
+func Get24Time(t time.Time) time.Time {
 	dateStr := TimeToDate(t.Add(time.Hour * 24))
 	return DateStrToTime(dateStr)
 }
 
 // 获取当日晚上24点（次日0点）的时间戳
-func Get24timeUnix(t time.Time) int64 {
-	t24 := Get24time(t)
+func Get24TimeUnix(t time.Time) int64 {
+	t24 := Get24Time(t)
 	return GetTimeUnix(t24)
 }
 
 // 获取今天晚上24点（次日0点）的时间
-func GetToday24time() time.Time {
-	return Get24time(time.Now())
+func GetToday24Time() time.Time {
+	return Get24Time(time.Now())
 }
 
 // 获取今天晚上24点（次日0点）的时间戳
-func GetToday24timeUnix() int64 {
-	return Get24timeUnix(time.Now())
+func GetToday24TimeUnix() int64 {
+	return Get24TimeUnix(time.Now())
 }
 
 // 时间转换成日期字符串 (time.Time to "2006-01-02")
